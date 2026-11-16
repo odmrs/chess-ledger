@@ -27,29 +27,29 @@
   "schedule": {
     "2026-11-16": [
       { "id": "coord", "kind": "coord", "minutes": 5, "note": "Find square · white · with the edge labels visible. Three 30-second rounds." },
-      { "id": "tactics", "kind": "tactics", "theme": "mateIn1", "target": 15, "minutes": 20 },
+      { "id": "tactics", "kind": "tactics", "theme": "mateIn1", "minutes": 20 },
       { "id": "endgame", "kind": "manual", "title": "Endgame · queen mate", "minutes": 15, "note": "King and queen against king, until you can do it alone three times in a row.", "link": "https://lichess.org/practice", "linkLabel": "Open practice" },
       { "id": "game", "kind": "game", "minutes": 15 },
       { "id": "review", "kind": "review", "minutes": 5 }
     ],
     "2026-11-17": [
       { "id": "coord", "kind": "coord", "minutes": 5, "note": "White, edge labels visible." },
-      { "id": "tactics", "kind": "tactics", "theme": "mateIn1", "target": 15, "minutes": 15 },
+      { "id": "tactics", "kind": "tactics", "theme": "mateIn1", "minutes": 15 },
       { "id": "classic", "kind": "manual", "title": "Classic game · the Opera Game", "minutes": 40, "note": "Morphy vs Duke of Brunswick and Count Isouard, Paris 1858. Play the first 4 moves, then cover the next move and guess what Morphy played. At the end: which principle did Black break?", "link": "https://en.wikipedia.org/wiki/Opera_Game", "linkLabel": "Open game" }
     ],
     "2026-11-18": [
       { "id": "coord", "kind": "coord", "minutes": 5, "note": "White, edge labels visible." },
-      { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+      { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
       { "id": "endgame", "kind": "manual", "title": "Endgame · two-rook mate", "minutes": 40, "note": "Two rooks against king, then review the queen mate.", "link": "https://lichess.org/practice", "linkLabel": "Open practice" }
     ],
     "2026-11-19": [
       { "id": "coord", "kind": "coord", "minutes": 5, "note": "Now as black, edge labels visible. The board flips." },
-      { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+      { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
       { "id": "opening", "kind": "manual", "title": "Opening · the Italian", "minutes": 40, "note": "Play the Italian against the computer, level 1–2, two or three times. Each move: which of the 5 principles am I following?", "link": "https://lichess.org/setup/ai", "linkLabel": "Play the computer" }
     ],
     "2026-11-20": [
       { "id": "coord", "kind": "coord", "minutes": 5, "note": "Alternate white and black." },
-      { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+      { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
       { "id": "game", "kind": "game", "minutes": 30 },
       { "id": "review", "kind": "review", "minutes": 10 }
     ]
@@ -73,8 +73,8 @@
       "goals": [
         { "id": "rules", "text": "I know every rule, including castling, en passant, promotion and stalemate" },
         { "id": "notation", "text": "I read and write notation without looking it up" },
-        { "id": "coord20", "text": "Coordinates: 20 correct in 30 seconds", "auto": { "kind": "coordMax", "target": 20 } },
-        { "id": "games20", "text": "Twenty online games", "auto": { "kind": "games", "target": 20 } },
+        { "id": "coord20", "text": "Coordinates: 20 correct in 30 seconds", "auto": { "kind": "coordMax" } },
+        { "id": "games20", "text": "Twenty online games", "auto": { "kind": "games" } },
         { "id": "themes1", "text": "Mate in 1 and hanging pieces mastered", "auto": { "kind": "themesMastered" } }
       ],
       "figure": {
@@ -85,26 +85,26 @@
       "week": {
         "mon": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "classic", "kind": "manual", "title": "Classic game", "minutes": 40, "note": "A world champion's game, guessing each move after the opening.", "link": "https://en.wikipedia.org/wiki/List_of_chess_games", "linkLabel": "Open game list" }
         ],
         "tue": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 30, "minutes": 55 }
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 55 }
         ],
         "wed": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "endgame", "kind": "manual", "title": "Endgames", "minutes": 40, "note": "Basic mates: queen, two rooks, rook.", "link": "https://lichess.org/practice", "linkLabel": "Open practice" }
         ],
         "thu": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "opening", "kind": "manual", "title": "Opening", "minutes": 40, "note": "The Italian against the computer (level 1–2), checking the 5 principles.", "link": "https://lichess.org/setup/ai", "linkLabel": "Play the computer" }
         ],
         "fri": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "game", "kind": "game", "minutes": 30 },
           { "id": "review", "kind": "review", "minutes": 10 }
         ],
@@ -134,26 +134,26 @@
       "week": {
         "mon": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "classic", "kind": "manual", "title": "Classic game", "minutes": 40, "note": "Anderssen vs Kieseritzky, London 1851, guessing each move.", "link": "https://en.wikipedia.org/wiki/Immortal_Game", "linkLabel": "Open game" }
         ],
         "tue": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 30, "minutes": 55 }
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 55 }
         ],
         "wed": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "endgame", "kind": "manual", "title": "Endgames", "minutes": 40, "note": "Rook against king, then king and pawn against king.", "link": "https://lichess.org/practice", "linkLabel": "Open practice" }
         ],
         "thu": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "opening", "kind": "manual", "title": "Opening", "minutes": 40, "note": "Games against the computer with your repertoire.", "link": "https://lichess.org/setup/ai", "linkLabel": "Play the computer" }
         ],
         "fri": [
           { "id": "coord", "kind": "coord", "minutes": 5 },
-          { "id": "tactics", "kind": "tactics", "theme": "current", "target": 15, "minutes": 15 },
+          { "id": "tactics", "kind": "tactics", "theme": "current", "minutes": 15 },
           { "id": "game", "kind": "game", "minutes": 30 },
           { "id": "review", "kind": "review", "minutes": 10 }
         ],

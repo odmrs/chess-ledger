@@ -172,7 +172,7 @@ function isDone(t, k = today()) {
   const d = S.data.days[k] || { done: {} };
   if (d.done?.[t.id]) return true;
   if (t.kind === "coord") return d.coord > 0;
-  if (t.kind === "tactics") { const p = themePuzzles(t.theme, k); return (p ? p.played : d.puzzles?.[t.theme] || 0) >= t.target; }
+  if (t.kind === "tactics") return false; // time-boxed: the method says not to chase a number of puzzles
   const games = onDay(S.games, k);
   if (t.kind === "game") return games.length > 0;
   if (t.kind === "review") return games.length > 0 && games.every((g) => S.data.games[g.id]?.marks?.length);
@@ -220,7 +220,7 @@ function entry(t, n, k) {
   const title = t.title || { coord: "Coordinates", tactics: `Tactics · ${themeName}`, game: "Game · 15+10", review: "Game review" }[t.kind];
   const note = t.note || {
     coord: "Find square, three 30-second rounds. Log the best one.",
-    tactics: "Difficulty: Easiest. Before you click: checks, captures, threats. Don't move pieces to test.",
+    tactics: "Difficulty: Easiest. Watch the clock, not the count: understanding one puzzle beats guessing ten. Before you click: checks, captures, threats. Tick it when the time is up.",
     game: 'As white, the Italian: <span class="mono">1.e4 e5 2.Nf3 Nc6 3.Bc4</span>. As black, <span class="mono">1…e5</span> or <span class="mono">1…d5</span>.',
     review: "First ten moves from memory in your notebook, what you were thinking, and only then the engine. Mark the mistake.",
   }[t.kind] || "";
@@ -230,11 +230,9 @@ function entry(t, n, k) {
     act = `<label class="field" for="coord">best round <input id="coord" inputmode="numeric" value="${d.coord ?? ""}"></label>
       <a class="link" href="https://lichess.org/training/coordinate" ${ext}>Open on Lichess →</a>`;
   } else if (t.kind === "tactics") {
-    const p = themePuzzles(t.theme, k), played = p ? p.played : d.puzzles?.[t.theme] || 0;
-    act = `<span class="tally"><span class="figure">${played}</span><span class="faint">/ ${t.target}${p?.played ? ` · ${p.solved} solved` : ""}</span></span>
-      <span class="meter" aria-hidden="true"><i style="width:${Math.min(100, (played / t.target) * 100)}%"></i></span>
-      ${p ? "" : `<label class="field" for="pz">done <input id="pz" data-theme="${esc(t.theme)}" inputmode="numeric" value="${played || ""}"></label>`}
-      <a class="link" href="https://lichess.org/training/${esc(t.theme)}" ${ext}>Open on Lichess →</a>`;
+    const p = themePuzzles(t.theme, k);
+    act = (p ? `<span class="tally"><span class="figure">${p.solved}</span><span class="faint">of ${p.played} solved today</span></span>` : "")
+      + `<a class="link" href="https://lichess.org/training/${esc(t.theme)}" ${ext}>Open on Lichess →</a>`;
   } else if (t.kind === "game") {
     const games = onDay(S.games, k);
     act = (games.length ? games.map((g) => `<a class="link" href="https://lichess.org/${g.id}" ${ext}>${g.result} vs ${esc(g.opponent)}</a>`).join("")
