@@ -68,7 +68,7 @@
         "title": "Endgame · queen mate",
         "minutes": 15,
         "note": "King and queen against king, until you can do it alone three times in a row.",
-        "link": "https://lichess.org/practice",
+        "link": "https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf",
         "linkLabel": "Open practice"
       },
       {
@@ -124,7 +124,7 @@
         "title": "Endgame · two-rook mate",
         "minutes": 40,
         "note": "Two rooks against king, then review the queen mate.",
-        "link": "https://lichess.org/practice",
+        "link": "https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf",
         "linkLabel": "Open practice"
       }
     ],
@@ -291,7 +291,7 @@
             "title": "Endgames",
             "minutes": 40,
             "note": "Basic mates: queen, two rooks, rook.",
-            "link": "https://lichess.org/practice",
+            "link": "https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf",
             "linkLabel": "Open practice"
           }
         ],
@@ -461,7 +461,7 @@
             "title": "Endgames",
             "minutes": 40,
             "note": "Rook against king, then king and pawn against king.",
-            "link": "https://lichess.org/practice",
+            "link": "https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf",
             "linkLabel": "Open practice"
           }
         ],
